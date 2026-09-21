@@ -1,0 +1,111 @@
+{
+  "version": "0.1.0",
+  "generatedAt": "2026-09-21T13:15:45.1999347+08:00",
+  "files": [
+    {
+      "path": "ST-Gemini-Reply/ACCEPTANCE.md",
+      "bytes": 6154,
+      "sha256": "cceab4707626c294363e9d705bb4a712385e3ffde3d3fc05594d526fcea2e7f6"
+    },
+    {
+      "path": "ST-Gemini-Reply/evidence/baselines.json",
+      "bytes": 1049,
+      "sha256": "28239cf19227f757ca609ce8f40be3f90773419439bc87067c37d680faff1785"
+    },
+    {
+      "path": "ST-Gemini-Reply/evidence/mock-requests.jsonl",
+      "bytes": 5516,
+      "sha256": "0fb765db30d53eed10edeead31ada11537be5c80b6bfe02d5e5875be23c6f0ef"
+    },
+    {
+      "path": "ST-Gemini-Reply/evidence/native-integration-results.json",
+      "bytes": 3083,
+      "sha256": "2da1196eb18164ba267f8b4cc133321e54101aac742cd3a6ff9f1971dedd19d3"
+    },
+    {
+      "path": "ST-Gemini-Reply/evidence/saved-chat-evidence.json",
+      "bytes": 8786,
+      "sha256": "aae878a68f0ab0def45f25248318e011ff73958dc1107fd4604494305c0aabf4"
+    },
+    {
+      "path": "ST-Gemini-Reply/evidence/tool-manager-integration-results.json",
+      "bytes": 1432,
+      "sha256": "240a6c800a0ef73282a4cc45965f0b88ce2488525c80f814294df93072185c3a"
+    },
+    {
+      "path": "ST-Gemini-Reply/evidence/unit-tests-20260921.txt",
+      "bytes": 2829,
+      "sha256": "cd186f9e0677218c8297efc2b8ecf1ad28a005131e24b2e0c0e565e02450ba5c"
+    },
+    {
+      "path": "ST-Gemini-Reply/index.js",
+      "bytes": 2375,
+      "sha256": "c22a6e80a46849d9cbeaab87d7d7f52549ab2a9d6074c6915edef1333c63b9a2"
+    },
+    {
+      "path": "ST-Gemini-Reply/LICENSE",
+      "bytes": 19750,
+      "sha256": "978a8c832bb0dc3aef756768089a11b41ccaa7472d80491d74bbffb23aae94b1"
+    },
+    {
+      "path": "ST-Gemini-Reply/manifest.json",
+      "bytes": 205,
+      "sha256": "9f21aec5b931610378299d87dc0713742e6d23af24ec8b8e714e9dbb1e66105f"
+    },
+    {
+      "path": "ST-Gemini-Reply/NOTICE.md",
+      "bytes": 1174,
+      "sha256": "022a5c18c00dc64a7ffb74cb4bf1f6a0246f7237118c504f0d0267f1bfffbf84"
+    },
+    {
+      "path": "ST-Gemini-Reply/package.json",
+      "bytes": 177,
+      "sha256": "01a14f7a439a0e87f4417afb0381522185987d7fcd49909b74d6a1a7cadae41b"
+    },
+    {
+      "path": "ST-Gemini-Reply/README.md",
+      "bytes": 6078,
+      "sha256": "5f5ba72405ff7a82ad10e1cb908232a1e258436aa5b102aa506406f4cd87e20e"
+    },
+    {
+      "path": "ST-Gemini-Reply/src/decoder.js",
+      "bytes": 2896,
+      "sha256": "e1bba07b8ebd26ff5775f98c0f9eb18795ccc60ad324611405383374e12dfaa7"
+    },
+    {
+      "path": "ST-Gemini-Reply/src/reply.js",
+      "bytes": 9165,
+      "sha256": "d8748636f040486063072a3dd26d83cb6baf6c6013487f1acdb974d534e79d23"
+    },
+    {
+      "path": "ST-Gemini-Reply/src/request.js",
+      "bytes": 3990,
+      "sha256": "6dacd91f86673302d510dcdd12d11ea3442a4340b4e1224a31512592090c1ad1"
+    },
+    {
+      "path": "ST-Gemini-Reply/src/runtime.js",
+      "bytes": 5774,
+      "sha256": "2db572891e6fdfa05d6ae237cfbe57f738a34ee8f0d41ab62dceae9c789c3527"
+    },
+    {
+      "path": "ST-Gemini-Reply/src/transport.js",
+      "bytes": 7538,
+      "sha256": "937a9a5ea09f201e21e4cf5c2dc803549fffded75a13975feb83263ee8f79e53"
+    },
+    {
+      "path": "ST-Gemini-Reply/style.css",
+      "bytes": 367,
+      "sha256": "618bc2623fc635c6c875cc74c4b40cf050ee0834a223656fdfacc5b1ca38ca59"
+    },
+    {
+      "path": "ST-Gemini-Reply/test/core.test.js",
+      "bytes": 17094,
+      "sha256": "d4b70e0f145d9928f92c6c14bbe4ae78e6c53419ae51f1093173b074407f3a38"
+    },
+    {
+      "path": "ST-Gemini-Reply/test/runtime.test.js",
+      "bytes": 7991,
+      "sha256": "e6d0c657c0e9e26e70025c57cd3343f65231c9f417b15a74128da216a5805926"
+    }
+  ]
+}

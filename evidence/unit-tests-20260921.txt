@@ -1,0 +1,42 @@
+Date: 2026-09-21 (Asia/Shanghai)
+Node: 22.22.2
+Command: node --test --test-reporter=spec test/*.test.js
+Exit code: 0
+
+✔ request gate and immutable multimodal request preparation (2.5336ms)
+✔ interceptor only claims exact same-origin marked POST; marker is consumed once (0.362ms)
+✔ decoder every split point, escapes, Unicode and no half-surrogate output (2.8211ms)
+✔ decoder rejects extra fields, illegal escapes, control characters and unpaired Unicode (0.2036ms)
+✔ OpenAI stream: byte-split SSE, tool argument fragments, plain suppression, reasoning retained (49.4473ms)
+✔ plain fallback is held to the end and labelled honestly (0.8757ms)
+✔ ST forwards SSE without content-type; still parse as the requested stream (0.9026ms)
+✔ partial is preserved but never complete: length (0.7545ms)
+✔ partial is preserved but never complete: missing close brace (1.2262ms)
+✔ partial is preserved but never complete: missing terminal (0.8297ms)
+✔ partial is preserved but never complete: invalid escape (0.6571ms)
+✔ partial is preserved but never complete: content filter (0.4848ms)
+✔ finish reason alone is a valid terminal; DONE alone also accepted for a closed tool envelope (1.1645ms)
+✔ genuinely empty replies retry at most three attempts (2.0128ms)
+✔ reasoning-only, refusal and bad tool arguments are not retried (0.7986ms)
+✔ real tools retain IDs, signatures and raw argument deltas; never execute mixed/invalid tools (1.7675ms)
+✔ native Gemini streaming and non-stream display both retain finish cause and real tool signatures (3.415ms)
+✔ parameterless real tools remain executable with an empty argument string (1.2622ms)
+✔ non-stream OpenAI response unwrapped with reasoning and usage retained (0.8129ms)
+✔ HTTP failure and pre-cancel do not retry; cancellation propagates to upstream (0.8723ms)
+✔ idle timeout does not cap total stream duration; socket loss preserves partial without retry (107.0681ms)
+✔ disabled, non-Gemini, quiet and unrelated fetch pass through unchanged (23.6287ms)
+✔ stream status is saved on matching message and matching swipe before MESSAGE_RECEIVED observers (6.5224ms)
+✔ non-stream status attaches to new message; regenerate is not attributed to previous reply (1.3128ms)
+✔ quiet generation ending while main stream is active must not detach its status (3.0257ms)
+✔ switching chat, replacing message and switching existing swipe cannot receive late status (3.5051ms)
+✔ fresh unprotected swipe clears old status and leaves other swipe intact (0.302ms)
+✔ cancellation and manual edits cannot be labelled complete (1.264ms)
+✔ a failed non-stream request cannot attach its status to a later unrelated inserted message (1.3763ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 265.3006

@@ -1,0 +1,64 @@
+{
+  "sillyTavern": "1.19.0 / 06bde939fb1e9c4c8d8641d810f0a916b5bce127",
+  "source": "Unchanged public/scripts/tool-calling.js; imported UI dependencies stubbed in Node vm",
+  "sha256": "937d334b37f17cb6d54f44bac304317014069f782dd678fcee1abc3c5f4a9252",
+  "limitation": "Parser and tool invocation only; not browser lifecycle or automatic follow-up generation",
+  "results": [
+    {
+      "native": false,
+      "stream": false,
+      "emptyArguments": false,
+      "invocations": 1,
+      "pass": true
+    },
+    {
+      "native": false,
+      "stream": false,
+      "emptyArguments": true,
+      "invocations": 1,
+      "pass": true
+    },
+    {
+      "native": false,
+      "stream": true,
+      "emptyArguments": false,
+      "invocations": 1,
+      "pass": true
+    },
+    {
+      "native": false,
+      "stream": true,
+      "emptyArguments": true,
+      "invocations": 1,
+      "pass": true
+    },
+    {
+      "native": true,
+      "stream": false,
+      "emptyArguments": false,
+      "invocations": 1,
+      "pass": true
+    },
+    {
+      "native": true,
+      "stream": false,
+      "emptyArguments": true,
+      "invocations": 1,
+      "pass": true
+    },
+    {
+      "native": true,
+      "stream": true,
+      "emptyArguments": false,
+      "invocations": 1,
+      "pass": true
+    },
+    {
+      "native": true,
+      "stream": true,
+      "emptyArguments": true,
+      "invocations": 1,
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+#gemini-reply-settings { margin: 0.7em 0; }
+#gemini-reply-settings summary { cursor: pointer; font-weight: 600; margin-bottom: 0.6em; }
+#gemini-reply-settings p { font-size: 0.9em; margin: 0.5em 0; }
+.gemini-reply-note { margin-top: 0.6em; font-size: 0.85em; opacity: 0.85; }
+.gemini-reply-warning, .gemini-reply-note { color: var(--SmartThemeQuoteColor, #d9aa73); }

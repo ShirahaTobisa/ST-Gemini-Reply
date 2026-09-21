@@ -1,0 +1,33 @@
+{
+  "collectedAt": "2026-09-21T05:14:32.439Z",
+  "node": "v22.22.2",
+  "sillyTavern": {
+    "version": "1.19.0",
+    "commit": "06bde939fb1e9c4c8d8641d810f0a916b5bce127",
+    "trackedFilesUnchanged": true,
+    "files": [
+      {
+        "file": "public/scripts/tool-calling.js",
+        "sha256": "937d334b37f17cb6d54f44bac304317014069f782dd678fcee1abc3c5f4a9252"
+      },
+      {
+        "file": "public/scripts/openai.js",
+        "sha256": "fa8111da944fac2d3f9f65ff017996f0b890f2a4663b67c3c2de44fa547668d8"
+      },
+      {
+        "file": "public/script.js",
+        "sha256": "d1e248efbae8a1df0a248410225cea76901f33533919fc32a28a172c1514600f"
+      },
+      {
+        "file": "src/endpoints/backends/chat-completions.js",
+        "sha256": "9fc251057cc27f054ffdca34f34156d91a1bde62e3da047d171339bd6314851b"
+      }
+    ]
+  },
+  "rph": {
+    "version": "1.9.5",
+    "commit": "cd7fb2b946f5985991b60597960852671013f36f",
+    "file": "assets/js/api-utils.js",
+    "sha256": "7110b2a2599b3f45e9b0804f0c58cbfdbc1c405092f67bdf85ecf2c7a4d5294d"
+  }
+}

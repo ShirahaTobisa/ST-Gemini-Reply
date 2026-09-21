@@ -1,0 +1,130 @@
+{
+  "sillyTavern": "1.19.0 / 06bde939fb1e9c4c8d8641d810f0a916b5bce127",
+  "endpoint": "local mock; no real Gemini API",
+  "results": [
+    {
+      "source": "makersuite",
+      "stream": true,
+      "case": "OK",
+      "textLength": 100,
+      "status": {
+        "mode": "tool",
+        "finishReason": "STOP",
+        "complete": true,
+        "state": "complete",
+        "detail": "工具正文已完整接收",
+        "attempts": 1
+      },
+      "pass": true
+    },
+    {
+      "source": "makersuite",
+      "stream": true,
+      "case": "LENGTH",
+      "textLength": 10,
+      "status": {
+        "mode": "tool",
+        "finishReason": "MAX_TOKENS",
+        "complete": false,
+        "state": "incomplete",
+        "reason": "length",
+        "detail": "达到输出长度上限，正文可能未完成",
+        "attempts": 1
+      },
+      "pass": true
+    },
+    {
+      "source": "makersuite",
+      "stream": false,
+      "case": "OK",
+      "textLength": 100,
+      "status": {
+        "mode": "tool",
+        "finishReason": "STOP",
+        "complete": true,
+        "state": "complete",
+        "detail": "工具正文已完整接收",
+        "attempts": 1
+      },
+      "pass": true
+    },
+    {
+      "source": "makersuite",
+      "stream": false,
+      "case": "LENGTH",
+      "textLength": 10,
+      "status": {
+        "mode": "tool",
+        "finishReason": "MAX_TOKENS",
+        "complete": false,
+        "state": "incomplete",
+        "reason": "length",
+        "detail": "达到输出长度上限，正文可能未完成",
+        "attempts": 1
+      },
+      "pass": true
+    },
+    {
+      "source": "vertexai",
+      "stream": true,
+      "case": "OK",
+      "textLength": 100,
+      "status": {
+        "mode": "tool",
+        "finishReason": "STOP",
+        "complete": true,
+        "state": "complete",
+        "detail": "工具正文已完整接收",
+        "attempts": 1
+      },
+      "pass": true
+    },
+    {
+      "source": "vertexai",
+      "stream": true,
+      "case": "LENGTH",
+      "textLength": 10,
+      "status": {
+        "mode": "tool",
+        "finishReason": "MAX_TOKENS",
+        "complete": false,
+        "state": "incomplete",
+        "reason": "length",
+        "detail": "达到输出长度上限，正文可能未完成",
+        "attempts": 1
+      },
+      "pass": true
+    },
+    {
+      "source": "vertexai",
+      "stream": false,
+      "case": "OK",
+      "textLength": 100,
+      "status": {
+        "mode": "tool",
+        "finishReason": "STOP",
+        "complete": true,
+        "state": "complete",
+        "detail": "工具正文已完整接收",
+        "attempts": 1
+      },
+      "pass": true
+    },
+    {
+      "source": "vertexai",
+      "stream": false,
+      "case": "LENGTH",
+      "textLength": 10,
+      "status": {
+        "mode": "tool",
+        "finishReason": "MAX_TOKENS",
+        "complete": false,
+        "state": "incomplete",
+        "reason": "length",
+        "detail": "达到输出长度上限，正文可能未完成",
+        "attempts": 1
+      },
+      "pass": true
+    }
+  ]
+}
