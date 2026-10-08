@@ -50,6 +50,7 @@ test('request gate and immutable multimodal request preparation', () => {
     assert.equal(withTools.tool_choice, 'required');
     assert.equal(withTools.tools[0].function.name, 'search');
     assert.match(prepareRequest({ ...base(), type: 'continue' }).messages[0].content, /only the new continuation/);
+    assert.match(prepareRequest({ ...base(), messages: [...base().messages, { role: 'assistant', content: '<planning>' }] }).messages[0].content, /only the new continuation/);
 });
 
 test('interceptor only claims exact same-origin marked POST; marker is consumed once', () => {

@@ -27,7 +27,7 @@ export function prepareRequest(body) {
         type: 'function',
         function: {
             name: TOOL_NAME,
-            description: 'Submit the assistant reply for display. Put the entire reply in content, preserving all formatting, markup and state update blocks. This function only displays text and performs no external action.',
+            description: 'Submit the complete response for display. Put everything you would otherwise write as ordinary text into content, in the same order, including any thinking, planning or analysis section the instructions ask for, and all formatting, markup and state update blocks. This function only displays text and performs no external action.',
             parameters: {
                 type: 'object', properties: { content: { type: 'string' } },
                 required: ['content'], additionalProperties: false,
@@ -37,8 +37,8 @@ export function prepareRequest(body) {
     next.tool_choice = next.tools.length === 1
         ? { type: 'function', function: { name: TOOL_NAME } } : 'required';
     next.parallel_tool_calls = false;
-    const instruction = 'For this turn, submit your reply using output_reply with the reply text in content. Preserve the requested language, formatting and markup. Do not repeat that reply as ordinary text. If another tool is needed, call it first; submit the reply only after its result is available.'
-        + (body.type === 'continue' ? ' Continue from the existing reply; include only the new continuation.' : '');
+    const instruction = 'For this turn, submit your response using output_reply. content must hold the full response exactly as you would write it as ordinary text, keeping every section the instructions require (such as a thinking or planning block before the main text), the requested language, formatting and markup. Do not repeat it as ordinary text. If another tool is needed, call it first; submit the reply only after its result is available.'
+        + (body.type === 'continue' || next.messages.at(-1)?.role === 'assistant' ? ' Continue directly from where the last assistant message stops; include only the new continuation.' : '');
     // Only the outgoing copy changes; no prompt is written to chat history or presets.
     const lastUser = next.messages.findLast(m => m.role === 'user');
     if (lastUser && typeof lastUser.content === 'string') lastUser.content += '\n\n' + instruction;
