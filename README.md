@@ -70,4 +70,4 @@
 
 开发验证可在本目录运行 `npm test`（Node 22，无额外依赖）。安装包的正式检查结果和未测事项见同目录 `ACCEPTANCE.md`。该报告记录首次离线打包时的状态，早于 GitHub 仓库发布。
 
-许可：CC BY-NC 4.0，详见 `LICENSE` 和 `NOTICE.md`。
+许可：CC BY-NC 4.0，详见 `LICENSE`。
