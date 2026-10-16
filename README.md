@@ -2,7 +2,7 @@
 
 版本：0.1.0。适配与本地验收基准：SillyTavern 1.19.0，提交 `06bde939fb1e9c4c8d8641d810f0a916b5bce127`。
 
-借鉴 RP-Hub 的 `output_reply` 方法：让 Gemini 在工具参数中提交回复，扩展将其还原为普通助手正文。中文、换行、表情、Markdown 和面板标记会继续经过酒馆原有的显示、正则、保存和候选回复流程。
+让 Gemini 通过 `output_reply` 工具在参数中提交回复，扩展再把它还原为普通助手正文。中文、换行、表情、Markdown 和面板标记会继续经过酒馆原有的显示、正则、保存和候选回复流程。
 
 这是独立扩展，不需要记忆插件、酒馆助手、Extras 或服务器插件。模型请求仍走酒馆原有后端，扩展不保存 API 密钥。真实 Gemini 的抗截断效果尚未做对照实验，不能保证消除截断。
 
@@ -70,4 +70,4 @@
 
 开发验证可在本目录运行 `npm test`（Node 22，无额外依赖）。安装包的正式检查结果和未测事项见同目录 `ACCEPTANCE.md`。该报告记录首次离线打包时的状态，早于 GitHub 仓库发布。
 
-方法来源：[STA1N156 / RP-Hub](https://github.com/STA1N156/RP-Hub)，1.9.5 提交 `cd7fb2b946f5985991b60597960852671013f36f`，核心参考 `assets/js/api-utils.js`。本项目重写了酒馆接入、流式解码、取消和完成状态处理，保留原项目出处及 CC BY-NC 4.0 许可；详见 `NOTICE.md` 和 `LICENSE`。
+许可：CC BY-NC 4.0，详见 `LICENSE` 和 `NOTICE.md`。
