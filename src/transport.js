@@ -114,7 +114,7 @@ export async function requestReply(fetcher, input, init, body, onStatus, { idleM
                     if (reader) { await reader.cancel().catch(() => {}); reader.releaseLock(); }
                 }
                 if (status.state === 'empty' && attempt < maxAttempts) {
-                    report({ ...status, state: 'retrying', detail: '收到空回复，正在有限重试' });
+                    report({ ...status, state: 'retrying', detail: `${status.detail}，正在有限重试` });
                     attempt++;
                     response = await open();
                     if (!response.ok) throw new Error(`HTTP ${response.status}`);

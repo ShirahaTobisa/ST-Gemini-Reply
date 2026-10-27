@@ -149,10 +149,11 @@ test('genuinely empty replies retry at most three attempts', async () => {
     assert.equal(count, 3);
 });
 
-test('reasoning-only, refusal and bad tool arguments are not retried', async () => {
+test('reasoning-only replies are retried; refusal is not', async () => {
     const reasoning = await execute(() => streamResponse([{ choices: [{ delta: { reasoning_content: '仅思考' }, finish_reason: 'stop' }] }, '[DONE]']));
-    assert.equal(reasoning.sent.length, 1);
+    assert.equal(reasoning.sent.length, 3);
     assert.equal(reasoning.status.complete, false);
+    assert.ok(reasoning.statuses.some(s => s.state === 'retrying' && s.detail === '只收到推理，没有正文，正在有限重试'));
     let count = 0;
     await assert.rejects(execute(() => { count++; return streamResponse([{ choices: [{ delta: { refusal: 'No' }, finish_reason: 'stop' }] }, '[DONE]']); }));
     assert.equal(count, 1);

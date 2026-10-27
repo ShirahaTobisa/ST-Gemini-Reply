@@ -10,6 +10,7 @@ export class Reply {
         this.parts = [];
         this.plain = '';
         this.reasoning = false;
+        this.other = false; // Non-thought output (images, code parts) that must not trigger a retry.
         this.finishReason = null;
         this.done = false;
         this.problem = null;
@@ -67,7 +68,7 @@ export class Reply {
                     this.plain += part.text;
                     if (part.thoughtSignature) this.plainSignature = part.thoughtSignature;
                 } else {
-                    this.reasoning = true; // Other substantive output must never trigger an empty retry.
+                    this.reasoning = this.other = true; // Other substantive output must never trigger an empty retry.
                     this.parts.push(part);
                     parts.push(part);
                 }
@@ -87,6 +88,7 @@ export class Reply {
         if (typeof content === 'string') this.plain += content;
         else if (Array.isArray(content)) this.plain += content.map(p => p.text || '').join('');
         this.reasoning ||= !!(body.reasoning || body.reasoning_content || body.reasoning_details?.length || body.images?.length);
+        this.other ||= !!body.images?.length;
         if (body.refusal) this.fail('refusal', '模型拒绝了本次请求');
         let text = '';
         for (const [i, tool] of (body.tool_calls || []).entries()) {
@@ -122,7 +124,8 @@ export class Reply {
             }
             return { ...base, state: 'complete', complete: true, detail: '真实工具交由酒馆执行' };
         }
-        if (!this.text.trim()) return { ...base, state: this.substantive ? 'incomplete' : 'empty', reason: 'empty', detail: this.reasoning ? '只收到推理，没有正文' : '没有收到正文' };
+        // Thinking without a reply is retried like an empty reply: with thoughts returned, that is how a dropped body now looks.
+        if (!this.text.trim()) return { ...base, state: this.calls.size || this.other ? 'incomplete' : 'empty', reason: 'empty', detail: this.reasoning ? '只收到推理，没有正文' : '没有收到正文' };
         return { ...base, state: 'complete', complete: true, detail: base.mode === 'tool' ? '工具正文已完整接收' : '普通正文兜底：接口未使用正文工具' };
     }
 

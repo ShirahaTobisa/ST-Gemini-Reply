@@ -8,7 +8,7 @@ panel.id = 'gemini-reply-settings';
 panel.innerHTML = `
     <summary>Gemini 抗截断</summary>
     <label class="checkbox_label"><input type="checkbox"><span>启用 Gemini 抗截断</span></label>
-    <p>仅用于 Gemini 主聊天。空回复最多尝试 3 次；仍可能截断。</p>
+    <p>仅用于 Gemini 主聊天。空回复或只有思考时最多尝试 3 次；仍可能截断。</p>
     <p class="gemini-reply-status" role="status"></p>`;
 const checkbox = panel.querySelector('input');
 const statusElement = panel.querySelector('[role="status"]');
